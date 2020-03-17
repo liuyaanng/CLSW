@@ -120,7 +120,8 @@ noremap n i
 noremap N I
 
 " Copy to system clipboard
-vnoremap Y :w !xclip -i -sel c<CR>
+vnoremap Y :w !pbcopy<CR><CR>
+"noremap P :r !pbpaste<CR><CR>
 
 " Joining lines
 noremap H J
@@ -238,7 +239,7 @@ source ~/.config/nvim/md_snippits.vim
 map <LEADER>/ :set splitbelow<CR>:sp<CR>:term<CR>
 
 " Press space twice to jump to the next '<++>' and edit it
-map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4i
+map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 " Spelling Check with <space>sc
 map <LEADER>sc :set spell!<CR>
